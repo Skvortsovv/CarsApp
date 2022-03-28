@@ -32,7 +32,7 @@ def about_command(message):
 
 @bot.message_handler(commands=['about'])
 def check_command(message):
-    # brand, year, state, country, condition=1, title_status, mileage, color
+    # brand, year, state, condition=1, title_status, mileage, color
 
 
 if __name__ == '__main__':

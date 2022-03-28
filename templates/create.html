@@ -1,0 +1,118 @@
+ <h1>Type in your car features</h1>
+    <form method="post">
+        <label for="brand">Choose a car:</label>
+        <br>
+            <select id="brand" name="brand">
+                <option value="ford">Ford</option>
+                <option value="dodge">Dodge</option>
+                <option value="nissan">Nissan</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="gmc">Gmc</option>
+                <option value="jeep">Jeep</option>
+                <option value="chrysler">Chrysler</option>
+                <option value="bmw">BMW</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="buick">Buick</option>
+                <option value="kia">Kia</option>
+                <option value="infiniti">Infiniti</option>
+                <option value="honda">Honda</option>
+                <option value="mercedes-benz">Mercedes-Benz</option>
+                <option value="cadillac">Cadillac</option>
+                <option value="heartland">Heartland</option>
+                <option value="other_brand">Other</option>
+            </select>
+        <br>
+        <br>
+
+        <label for="Year">Year</label>
+        <br>
+        <input type="number" name="Year"
+               placeholder="Production year"
+               value="{{ request.form['Year'] }}"></input>
+        <br>
+        <br>
+
+        <label for="state">Choose a state:</label>
+        <br>
+            <select id="state" name="state">
+                <option value="pennsylvania">Pennsylvania</option>
+                <option value="florida">Florida</option>
+                <option value="texas">Texas</option>
+                <option value="california">california</option>
+                <option value="michigan">michigan</option>
+                <option value="north carolina">north carolina</option>
+                <option value="minnesota">minnesota</option>
+                <option value="illinois">illinois</option>
+                <option value="wisconsin">wisconsin</option>
+                <option value="virginia">virginia</option>
+                <option value="new jersey">new jersey</option>
+                <option value="nevada">nevada</option>
+                <option value="oklahoma">oklahoma</option>
+                <option value="south carolina">south carolina</option>
+                <option value="new york">new york</option>
+                <option value="georgia">georgia</option>
+                <option value="missouri">missouri</option>
+                <option value="arizona">arizona</option>
+                <option value="ohio">ohio</option>
+                <option value="massachusetts">massachusetts</option>
+                <option value="oregon">oregon</option>
+                <option value="tennessee">tennessee</option>
+                <option value="connecticut">connecticut</option>
+                <option value="mississippi">mississippi</option>
+                <option value="colorado">colorado</option>
+                <option value="west virginia">west virginia</option>
+                <option value="alabama">alabama</option>
+                <option value="washington">washington</option>
+                <option value="indiana">indiana</option>
+                <option value="arkansas">arkansas</option>
+                <option value="louisiana">louisiana</option>
+                <option value="utah">utah</option>
+                <option value="kentucky">kentucky</option>
+                <option value="other_state">Other</option>
+            </select>
+        <br>
+        <br>
+
+        <label for="title_status">Choose a status:</label>
+         <br>
+            <select id="title_status" name="title_status">
+                <option value="clean vehicle">Clean vehicle</option>
+                <option value="salvage insurance">Salvage insurance</option>
+            </select>
+        <br>
+        <br>
+
+        <label for="milage">Milage</label>
+        <br>
+        <input type="number" name="milage"
+               placeholder="Car milage"
+               value="{{ request.form['milage'] }}"></input>
+        <br>
+        <br>
+
+        <label for="color">Choose a color:</label>
+         <br>
+            <select id="color" name="color">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="gray">Gray</option>
+                <option value="silver">Silver</option>
+                <option value="red">Red"</option>
+                <option value="blue">Blue</option>
+                <option value="no_color">No color</option>
+                <option value="green">Green</option>
+                <option value="gold">Gold</option>
+                <option value="orange">Orange</option>
+                <option value="charcoal">Charcoal</option>
+                <option value="brown">Brown</option>
+                <option value="yellow">Yellow</option>
+                <option value="magnetic metallic">Magnetic Metallic</option>
+                <option value="beige">Beige</option>
+                <option value="shadow black">Shadow Black</option>
+                <option value="other_color">Other</option>
+            </select>
+        <br>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>

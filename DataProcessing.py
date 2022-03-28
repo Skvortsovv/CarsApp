@@ -11,20 +11,23 @@ class DataProcessing:
     def process(self, file_path):
         self.df = pd.read_csv(file_path, index_col=0).drop(['model', 'vin', 'lot'], axis=1)
 
+        self.df = self.df[self.df['country'] != ' canada']
+
         no_pop_brands = self.df.brand.value_counts()[self.df.brand.value_counts() < 5].index
         self.df.loc[self.df['brand'].isin(no_pop_brands), 'brand'] = 'other_brand'
 
         no_pop_states = self.df.state.value_counts()[self.df.state.value_counts() < 7].index
         self.df.loc[self.df['state'].isin(no_pop_states), 'state'] = 'other_state'
 
-        no_pop_color = self.df.color.value_counts()[(self.df.color.value_counts() < 5) | (self.df.color.value_counts().index == 'color:')].index
+        no_pop_color = self.df.color.value_counts()[
+            (self.df.color.value_counts() < 5) | (self.df.color.value_counts().index == 'color:')].index
         self.df.loc[self.df['color'].isin(no_pop_color), 'color'] = 'other_color'
-
-        print(self.df.columns)
 
         self.df.condition = self.df.condition.str.extract('(\d+)')
         self.df.condition = self.df.condition.fillna(-9999)
         self.df.condition = self.df.condition.astype('int')
+
+        print(self.df.color.value_counts())
 
         for col in ['brand', 'state', 'country', 'title_status', 'color']:
             self.one_hot_encoding(col)

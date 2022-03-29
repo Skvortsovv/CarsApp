@@ -24,17 +24,17 @@
         <br>
         <br>
 
-        <label for="Year">Year</label>
+        <label for="year">Year</label>
         <br>
-        <input type="number" name="Year"
+        <input type="number" name="year"
                placeholder="Production year"
-               value="{{ request.form['Year'] }}"></input>
+               value="{{ request.form['year'] }}" required></input>
         <br>
         <br>
 
         <label for="state">Choose a state:</label>
         <br>
-            <select id="state" name="state">
+            <select id="state" name="state" required>
                 <option value="pennsylvania">Pennsylvania</option>
                 <option value="florida">Florida</option>
                 <option value="texas">Texas</option>
@@ -75,24 +75,24 @@
 
         <label for="title_status">Choose a status:</label>
          <br>
-            <select id="title_status" name="title_status">
+            <select id="title_status" name="title_status" required>
                 <option value="clean vehicle">Clean vehicle</option>
                 <option value="salvage insurance">Salvage insurance</option>
             </select>
         <br>
         <br>
 
-        <label for="milage">Milage</label>
+        <label for="mileage">Mileage</label>
         <br>
-        <input type="number" name="milage"
-               placeholder="Car milage"
-               value="{{ request.form['milage'] }}"></input>
+        <input type="number" name="mileage"
+               placeholder="Car mileage"
+               value="{{ request.form['mileage'] }}" required></input>
         <br>
         <br>
 
         <label for="color">Choose a color:</label>
          <br>
-            <select id="color" name="color">
+            <select id="color" name="color" required>
                 <option value="white">White</option>
                 <option value="black">Black</option>
                 <option value="gray">Gray</option>

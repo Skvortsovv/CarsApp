@@ -12,6 +12,7 @@ class DataProcessing:
         self.df = pd.read_csv(file_path, index_col=0).drop(['model', 'vin', 'lot'], axis=1)
 
         self.df = self.df[self.df['country'] != ' canada']
+        self.df = self.df.drop(['country'], axis=1)
 
         no_pop_brands = self.df.brand.value_counts()[self.df.brand.value_counts() < 5].index
         self.df.loc[self.df['brand'].isin(no_pop_brands), 'brand'] = 'other_brand'
@@ -27,9 +28,7 @@ class DataProcessing:
         self.df.condition = self.df.condition.fillna(-9999)
         self.df.condition = self.df.condition.astype('int')
 
-        print(self.df.color.value_counts())
-
-        for col in ['brand', 'state', 'country', 'title_status', 'color']:
+        for col in ['brand', 'state', 'title_status', 'color']:
             self.one_hot_encoding(col)
 
 
@@ -46,7 +45,6 @@ class DataProcessing:
 
         model = RandomForestRegressor(n_jobs=-1)
         model.fit(X_train, y_train)
-        pred = model.predict(X_test)
 
         pickle.dump(model, open('model.sav', 'wb'))
 

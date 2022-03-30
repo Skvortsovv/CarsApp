@@ -1,139 +1,141 @@
- <h1>Fill in your car features</h1>
- <img src="https://static.posters.cz/image/750/poster/cars-characters-i33475.jpg" alt="Cars" align="right">
-    <form method="post">
-        <label for="brand">Choose a car:</label>
-        <br>
-            <select id="brand" name="brand">
-                <option value="ford">Ford</option>
-                <option value="dodge">Dodge</option>
-                <option value="nissan">Nissan</option>
-                <option value="chevrolet">Chevrolet</option>
-                <option value="gmc">Gmc</option>
-                <option value="jeep">Jeep</option>
-                <option value="chrysler">Chrysler</option>
-                <option value="bmw">BMW</option>
-                <option value="hyundai">Hyundai</option>
-                <option value="buick">Buick</option>
-                <option value="kia">Kia</option>
-                <option value="infiniti">Infiniti</option>
-                <option value="honda">Honda</option>
-                <option value="mercedes-benz">Mercedes-Benz</option>
-                <option value="cadillac">Cadillac</option>
-                <option value="heartland">Heartland</option>
-                <option value="other_brand">Other</option>
-            </select>
-        <br>
-        <br>
+<body style="background-color:lightgray;">
+    <h1 style="font-family: Arial">Fill in your car features</h1>
+     <img src="https://clipartpngfree.com/save/cars/lgv_car_computer_animation_model.png" alt="Cars" align="right">
+        <form method="post">
+            <label for="brand" style="font-family: Arial">Choose a car:</label>
+            <br>
+                <select id="brand" name="brand">
+                    <option value="ford">Ford</option>
+                    <option value="dodge">Dodge</option>
+                    <option value="nissan">Nissan</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="gmc">Gmc</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="chrysler">Chrysler</option>
+                    <option value="bmw">BMW</option>
+                    <option value="hyundai">Hyundai</option>
+                    <option value="buick">Buick</option>
+                    <option value="kia">Kia</option>
+                    <option value="infiniti">Infiniti</option>
+                    <option value="honda">Honda</option>
+                    <option value="mercedes-benz">Mercedes-Benz</option>
+                    <option value="cadillac">Cadillac</option>
+                    <option value="heartland">Heartland</option>
+                    <option value="other_brand">Other</option>
+                </select>
+            <br>
+            <br>
 
-        <label for="year">Year</label>
-        <br>
-        <input type="number" name="year"
-               placeholder="Production year"
-               value="{{ request.form['year'] }}" required min="1900" max="2022"></input>
-        <br>
-        <br>
+            <label for="year" style="font-family: Arial">Year</label>
+            <br>
+            <input type="number" name="year"
+                   placeholder="Production year"
+                   value="{{ request.form['year'] }}" required min="1900" max="2022"></input>
+            <br>
+            <br>
 
-        <label for="state">Choose a state:</label>
-        <br>
-            <select id="state" name="state" required>
-                <option value="pennsylvania">Pennsylvania</option>
-                <option value="florida">Florida</option>
-                <option value="texas">Texas</option>
-                <option value="california">california</option>
-                <option value="michigan">michigan</option>
-                <option value="north carolina">north carolina</option>
-                <option value="minnesota">minnesota</option>
-                <option value="illinois">illinois</option>
-                <option value="wisconsin">wisconsin</option>
-                <option value="virginia">virginia</option>
-                <option value="new jersey">new jersey</option>
-                <option value="nevada">nevada</option>
-                <option value="oklahoma">oklahoma</option>
-                <option value="south carolina">south carolina</option>
-                <option value="new york">new york</option>
-                <option value="georgia">georgia</option>
-                <option value="missouri">missouri</option>
-                <option value="arizona">arizona</option>
-                <option value="ohio">ohio</option>
-                <option value="massachusetts">massachusetts</option>
-                <option value="oregon">oregon</option>
-                <option value="tennessee">tennessee</option>
-                <option value="connecticut">connecticut</option>
-                <option value="mississippi">mississippi</option>
-                <option value="colorado">colorado</option>
-                <option value="west virginia">west virginia</option>
-                <option value="alabama">alabama</option>
-                <option value="washington">washington</option>
-                <option value="indiana">indiana</option>
-                <option value="arkansas">arkansas</option>
-                <option value="louisiana">louisiana</option>
-                <option value="utah">utah</option>
-                <option value="kentucky">kentucky</option>
-                <option value="other_state">Other</option>
-            </select>
-        <br>
-        <br>
+            <label for="state" style="font-family: Arial">Choose a state:</label>
+            <br>
+                <select id="state" name="state" required>
+                    <option value="pennsylvania">Pennsylvania</option>
+                    <option value="florida">Florida</option>
+                    <option value="texas">Texas</option>
+                    <option value="california">california</option>
+                    <option value="michigan">michigan</option>
+                    <option value="north carolina">north carolina</option>
+                    <option value="minnesota">minnesota</option>
+                    <option value="illinois">illinois</option>
+                    <option value="wisconsin">wisconsin</option>
+                    <option value="virginia">virginia</option>
+                    <option value="new jersey">new jersey</option>
+                    <option value="nevada">nevada</option>
+                    <option value="oklahoma">oklahoma</option>
+                    <option value="south carolina">south carolina</option>
+                    <option value="new york">new york</option>
+                    <option value="georgia">georgia</option>
+                    <option value="missouri">missouri</option>
+                    <option value="arizona">arizona</option>
+                    <option value="ohio">ohio</option>
+                    <option value="massachusetts">massachusetts</option>
+                    <option value="oregon">oregon</option>
+                    <option value="tennessee">tennessee</option>
+                    <option value="connecticut">connecticut</option>
+                    <option value="mississippi">mississippi</option>
+                    <option value="colorado">colorado</option>
+                    <option value="west virginia">west virginia</option>
+                    <option value="alabama">alabama</option>
+                    <option value="washington">washington</option>
+                    <option value="indiana">indiana</option>
+                    <option value="arkansas">arkansas</option>
+                    <option value="louisiana">louisiana</option>
+                    <option value="utah">utah</option>
+                    <option value="kentucky">kentucky</option>
+                    <option value="other_state">Other</option>
+                </select>
+            <br>
+            <br>
 
-        <label for="title_status">Choose a status:</label>
-         <br>
-            <select id="title_status" name="title_status" required>
-                <option value="clean vehicle">Clean vehicle</option>
-                <option value="salvage insurance">Salvage insurance</option>
-            </select>
-        <br>
-        <br>
+            <label for="title_status" style="font-family: Arial">Choose a status:</label>
+             <br>
+                <select id="title_status" name="title_status" required>
+                    <option value="clean vehicle">Clean vehicle</option>
+                    <option value="salvage insurance">Salvage insurance</option>
+                </select>
+            <br>
+            <br>
 
-        <label for="mileage">Mileage</label>
-        <br>
-        <input type="number" name="mileage"
-               placeholder="Car mileage"
-               value="{{ request.form['mileage'] }}" required min="0" max="1020000"></input>
-        <br>
-        <br>
+            <label for="mileage" style="font-family: Arial">Mileage</label>
+            <br>
+            <input type="number" name="mileage"
+                   placeholder="Car mileage"
+                   value="{{ request.form['mileage'] }}" required min="0" max="1020000"></input>
+            <br>
+            <br>
 
-        <label for="color">Choose a color:</label>
-         <br>
-            <select id="color" name="color" required>
-                <option value="white">White</option>
-                <option value="black">Black</option>
-                <option value="gray">Gray</option>
-                <option value="silver">Silver</option>
-                <option value="red">Red"</option>
-                <option value="blue">Blue</option>
-                <option value="no_color">No color</option>
-                <option value="green">Green</option>
-                <option value="gold">Gold</option>
-                <option value="orange">Orange</option>
-                <option value="charcoal">Charcoal</option>
-                <option value="brown">Brown</option>
-                <option value="yellow">Yellow</option>
-                <option value="magnetic metallic">Magnetic Metallic</option>
-                <option value="beige">Beige</option>
-                <option value="shadow black">Shadow Black</option>
-                <option value="other_color">Other</option>
-            </select>
-        <br>
-        <br>
+            <label for="color" style="font-family: Arial">Choose a color:</label>
+             <br>
+                <select id="color" name="color" required>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="gray">Gray</option>
+                    <option value="silver">Silver</option>
+                    <option value="red">Red"</option>
+                    <option value="blue">Blue</option>
+                    <option value="no_color">No color</option>
+                    <option value="green">Green</option>
+                    <option value="gold">Gold</option>
+                    <option value="orange">Orange</option>
+                    <option value="charcoal">Charcoal</option>
+                    <option value="brown">Brown</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="magnetic metallic">Magnetic Metallic</option>
+                    <option value="beige">Beige</option>
+                    <option value="shadow black">Shadow Black</option>
+                    <option value="other_color">Other</option>
+                </select>
+            <br>
+            <br>
 
-        <button type="submit">Submit</button>
-        <br>
-    </form>
+            <button type="submit" style="font-family: Arial">Submit</button>
+            <br>
+        </form>
 
- <br>
- <p>
-     <h3>
-     Authors:
-     </h3>
      <br>
-     Artem Shpet
-      <br>
-     Anastasia Pozdniak
-      <br>
-     Polina Metalnikova
-      <br>
-     Anastasia Prikhodchenko
-      <br>
-     Valentin Chukin
-      <br>
-     Gleb Skvortsov
- </p>
+     <p>
+         <h3 style="font-family: Arial">
+         Authors:
+         </h3>
+         <br>
+         Artem Shpet
+          <br>
+         Anastasia Pozdniak
+          <br>
+         Polina Metalnikova
+          <br>
+         Anastasia Prikhodchenko
+          <br>
+         Valentin Chukin
+          <br>
+         Gleb Skvortsov
+     </p>
+</body>

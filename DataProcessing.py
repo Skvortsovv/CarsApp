@@ -31,7 +31,6 @@ class DataProcessing:
         for col in ['brand', 'state', 'title_status', 'color']:
             self.one_hot_encoding(col)
 
-
     def one_hot_encoding(self, col):
         dumm = pd.get_dummies(self.df[col])
         self.df = self.df.drop([col], axis=1)

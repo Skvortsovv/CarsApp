@@ -29,7 +29,7 @@
         <br>
         <input type="number" name="year"
                placeholder="Production year"
-               value="{{ request.form['year'] }}" required></input>
+               value="{{ request.form['year'] }}" required min="1900" max="2022"></input>
         <br>
         <br>
 
@@ -87,7 +87,7 @@
         <br>
         <input type="number" name="mileage"
                placeholder="Car mileage"
-               value="{{ request.form['mileage'] }}" required></input>
+               value="{{ request.form['mileage'] }}" required min="0" max="1020000"></input>
         <br>
         <br>
 
@@ -118,3 +118,22 @@
         <button type="submit">Submit</button>
         <br>
     </form>
+
+ <br>
+ <p>
+     <h3>
+     Authors:
+     </h3>
+     <br>
+     Artem Shpet
+      <br>
+     Anastasia Pozdniak
+      <br>
+     Polina Metalnikova
+      <br>
+     Anastasia Prikhodchenko
+      <br>
+     Valentin Chukin
+      <br>
+     Gleb Skvortsov
+ </p>

@@ -29,7 +29,7 @@ class DataProcessing:
             (self.df.color.value_counts() < 5) | (self.df.color.value_counts().index == 'color:')].index
         self.df.loc[self.df['color'].isin(no_pop_color), 'color'] = 'other_color'
 
-        self.df.condition = self.df.condition.str.extract('\d+')
+        self.df.condition = self.df.condition.str.extract('(\d+)')
         self.df.condition = self.df.condition.fillna(-9999)
         self.df.condition = self.df.condition.astype('int')
 
@@ -71,3 +71,4 @@ class DataProcessing:
 
 
 dataProcessing = DataProcessing(r'C:\Users\Gleb\Desktop\USA_cars_datasets.csv')
+dataProcessing.process()
